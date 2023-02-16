@@ -1,1 +1,20 @@
-@import "../libs/bootstrap/scss/bootstrap.scss"
+@import "../libs/bootstrap/scss/functions";
+@import "../libs/bootstrap/scss/variables";
+@import "../libs/bootstrap/scss/maps";
+@import "../libs/bootstrap/scss/mixins";
+@import "../libs/bootstrap/scss/utilities";
+
+$utilities:(
+    "Mostrar/Ocultar elementos":(
+        property: display,
+        responsive: false,
+        class: mostrar,
+        values:(
+            si: block,
+            no: none
+        )
+    ),
+);
+
+@import "../libs/bootstrap/scss/utilities/api";
+@import "../libs/bootstrap/scss/bootstrap.scss";

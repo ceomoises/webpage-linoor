@@ -1,0 +1,15 @@
+{
+  "name": "webpage-linoor",
+  "version": "1.0.0",
+  "description": "A digital marketing web page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Moisés Morales Almaraz",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "bootstrap-icons": "^1.10.3"
+  }
+}

@@ -1,8 +1,8 @@
-@import "../libs/bootstrap/scss/functions";
-@import "../libs/bootstrap/scss/variables";
-@import "../libs/bootstrap/scss/maps";
-@import "../libs/bootstrap/scss/mixins";
-@import "../libs/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/functions"; 
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/utilities";
 
 $utilities:(
     "Mostrar/Ocultar elementos":(
@@ -16,5 +16,5 @@ $utilities:(
     ),
 );
 
-@import "../libs/bootstrap/scss/utilities/api";
-@import "../libs/bootstrap/scss/bootstrap.scss";
+@import "../node_modules/bootstrap/scss/utilities/api";
+@import "../node_modules/bootstrap/scss/bootstrap.scss";

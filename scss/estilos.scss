@@ -1,20 +1,17 @@
-@import "../node_modules/bootstrap/scss/functions"; 
-@import "../node_modules/bootstrap/scss/variables";
-@import "../node_modules/bootstrap/scss/maps";
-@import "../node_modules/bootstrap/scss/mixins";
-@import "../node_modules/bootstrap/scss/utilities";
+/////////////////////////////////////////////
+/// 1. Patron de Colores 
+////////////////////////////////////////////
+$principal: #dc273c;
+$secundario: #293549;
+$texto: #293549;
 
-$utilities:(
-    "Mostrar/Ocultar elementos":(
-        property: display,
-        responsive: false,
-        class: mostrar,
-        values:(
-            si: block,
-            no: none
-        )
-    ),
-);
+/////////////////////////////////////////////
+/// 2. Modificando variables de Bootstrap 
+////////////////////////////////////////////
+$primary: $principal; //Color principal
+$secondary: $secundario; //Color secundario 
+$font-family-base: 'Open Sans', sans-serif; //Tipo de letra
+$body-color: $texto; //Color del texto
+$font-size-root: 15px; //Tamaño del texto
 
-@import "../node_modules/bootstrap/scss/utilities/api";
 @import "../node_modules/bootstrap/scss/bootstrap.scss";

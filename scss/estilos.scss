@@ -1,17 +1,49 @@
 /////////////////////////////////////////////
-/// 1. Patron de Colores 
+/// 0. DebuGGing AND TESTING
+//////////////////////////////////////////// 
+
+.row>*{
+    border: 1px solid red;
+}
+
+/////////////////////////////////////////////
+/// 1. PATRON DE COLORES  
 ////////////////////////////////////////////
 $principal: #dc273c;
 $secundario: #293549;
 $texto: #293549;
 
 /////////////////////////////////////////////
-/// 2. Modificando variables de Bootstrap 
+/// 2. MODIFICANDO VARIBALES DE BOOTSTRAP 
 ////////////////////////////////////////////
 $primary: $principal; //Color principal
 $secondary: $secundario; //Color secundario 
 $font-family-base: 'Open Sans', sans-serif; //Tipo de letra
 $body-color: $texto; //Color del texto
 $font-size-root: 15px; //Tamaño del texto
+$enable-negative-margins: true;
+
+// Componente Navbar 
+$navbar-toggler-padding-y: 0;
+$navbar-toggler-padding-x: 0;
+$navbar-toggler-focus-width: 0;
+$navbar-dark-color: white;
+$navbar-dark-hover-color: $principal;
+$navbar-dark-active-color: $principal;
+
+// Componente Button 
+$btn-border-radius: .2rem;
+$btn-padding-y: .8rem;
+$btn-padding-x: 2.4rem;
 
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+/////////////////////////////////////////////
+/// 3. ESTILOS GENERALES 
+////////////////////////////////////////////
+
+@include media-breakpoint-up(lg){
+    :root{
+        font-size: 16px;
+    }
+}

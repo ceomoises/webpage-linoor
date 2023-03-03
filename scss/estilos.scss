@@ -1,5 +1,5 @@
 /////////////////////////////////////////////
-/// 0. DebuGGing AND TESTING
+/// 0. DebuGGing and Testing
 //////////////////////////////////////////// 
 
 .row>*{
@@ -7,14 +7,14 @@
 }
 
 /////////////////////////////////////////////
-/// 1. PATRON DE COLORES  
+/// 1. Patron de Colores
 ////////////////////////////////////////////
 $principal: #dc273c;
 $secundario: #293549;
 $texto: #293549;
 
 /////////////////////////////////////////////
-/// 2. MODIFICANDO VARIBALES DE BOOTSTRAP 
+/// 2. Modificando variables de bootstrap
 ////////////////////////////////////////////
 $primary: $principal; //Color principal
 $secondary: $secundario; //Color secundario 
@@ -39,11 +39,50 @@ $btn-padding-x: 2.4rem;
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
 /////////////////////////////////////////////
-/// 3. ESTILOS GENERALES 
+/// 3. Estilos Generales
 ////////////////////////////////////////////
 
 @include media-breakpoint-up(lg){
     :root{
         font-size: 16px;
     }
+}
+
+/////////////////////////////////////////////
+/// 4. Estilos para el encabezado
+////////////////////////////////////////////
+
+.encabezado{
+    background: url("../images/FondoBienvenidos.jpg") center center/cover fixed;
+    // background-image: url("../images/FondoBienvenidos.jpg");
+    // background-position: center center;
+    // background-size: cover;
+    // background-attachment: fixed;    
+}
+
+@include media-breakpoint-up(lg){
+    .encabezado{
+        background: url("../images/FondoBienvenidos-lg.jpg") center center/cover fixed;
+    }
+}
+
+// Clase cover reutilizable | Aplica una capa semi-transparente
+.fondoCover{
+    position: relative;
+    // El ampersand selecciona al padre : .fondoCover
+    &::before{
+        content: "";
+        background-color: $secundario;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+        opacity: .6;
+    }
+    // .fondoCover > * 
+    & > *{
+        position: relative;
+    }
+
 }

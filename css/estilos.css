@@ -11506,4 +11506,29 @@ textarea.form-control-lg {
   :root {
     font-size: 16px;
   }
+}
+.encabezado {
+  background: url("../images/FondoBienvenidos.jpg") center center/cover fixed;
+}
+
+@media (min-width: 992px) {
+  .encabezado {
+    background: url("../images/FondoBienvenidos-lg.jpg") center center/cover fixed;
+  }
+}
+.fondoCover {
+  position: relative;
+}
+.fondoCover::before {
+  content: "";
+  background-color: #293549;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  opacity: 0.6;
+}
+.fondoCover > * {
+  position: relative;
 }/*# sourceMappingURL=estilos.css.map */

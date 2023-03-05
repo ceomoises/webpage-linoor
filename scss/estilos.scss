@@ -2,9 +2,9 @@
 /// 0. DebuGGing and Testing
 //////////////////////////////////////////// 
 
-.row>*{
-    border: 1px solid red;
-}
+// .row>*{
+//     border: 1px solid red;
+// }
 
 /////////////////////////////////////////////
 /// 1. Patron de Colores
@@ -36,10 +36,45 @@ $btn-border-radius: .2rem;
 $btn-padding-y: .8rem;
 $btn-padding-x: 2.4rem;
 
+/////////////////////////////////////////////
+/// 3. Cargando funciones nativas de Bootstrap
+////////////////////////////////////////////
+@import "../libs/bootstrap/scss/functions";
+@import "../libs/bootstrap/scss/variables";
+@import "../libs/bootstrap/scss/maps";
+@import "../libs/bootstrap/scss/mixins";
+@import "../libs/bootstrap/scss/utilities";
+
+/////////////////////////////////////////////
+/// 4. API de Utilidades personalizadas
+////////////////////////////////////////////
+$utilities:(
+    "Orden de capas":(
+        property: z-index,
+        responsive: false,
+        class: z-index,
+        values:(
+            n2:-2,
+            n1:-1,
+            0:0,
+            1:1,
+            2:2,
+            3:3,
+            4:4,
+            5:5,
+        )
+    )
+);
+@import "../libs/bootstrap/scss/utilities/api";
+
+/////////////////////////////////////////////
+/// 4. Imprimiendo Bootstrap 5
+////////////////////////////////////////////
+
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
 
 /////////////////////////////////////////////
-/// 3. Estilos Generales
+/// 6. Estilos Generales
 ////////////////////////////////////////////
 
 @include media-breakpoint-up(lg){
@@ -49,7 +84,7 @@ $btn-padding-x: 2.4rem;
 }
 
 /////////////////////////////////////////////
-/// 4. Estilos para el encabezado
+/// 7. Estilos para el encabezado
 ////////////////////////////////////////////
 
 .encabezado{
@@ -80,9 +115,31 @@ $btn-padding-x: 2.4rem;
         position: absolute;
         opacity: .6;
     }
-    // .fondoCover > * 
+    // .fondoCover > *  | selecciona a sus hijos directos y les asigna relative
     & > *{
         position: relative;
     }
+}
 
+// Personalizando icono hamburguesa 
+.navbar-toggler i::before{
+    transition: all .3s ease;
+}
+
+.navbar-toggler[aria-expanded="true"] i::before{
+    content: "\f62A";
+    color: $principal;
+}
+
+// Personalizando el menu desplegable
+@include media-breakpoint-down(md){
+    .navbar-nav{
+        background: $secondary;
+        border-radius: .3rem;
+    }
+    .nav-link{
+        padding: 1rem;
+        border-bottom: 1px solid rgb(255 255 255 / 25%);
+        box-shadow: 0 1px rgb(0 0 0 / 40%);
+    }
 }

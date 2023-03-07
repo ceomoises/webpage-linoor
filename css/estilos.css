@@ -11612,4 +11612,32 @@ textarea.form-control-lg {
     border-bottom: 1px solid rgba(255, 255, 255, 0.25);
     box-shadow: 0 1px rgba(0, 0, 0, 0.4);
   }
+}
+.tituloConLinea {
+  margin: 0;
+  padding: 0;
+}
+.tituloConLinea::after {
+  content: "";
+  display: block;
+  width: 150px;
+  border-bottom: 3px solid;
+  margin: 1.3rem 0;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media (min-width: 992px) {
+  .tituloConLinea::after {
+    width: 400px;
+    margin: 1.8rem 0;
+  }
+}
+
+.planDeAccionItem {
+  transition: box-shadow 0.3s ease;
+}
+
+.planDeAccionItem:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }/*# sourceMappingURL=estilos.css.map */

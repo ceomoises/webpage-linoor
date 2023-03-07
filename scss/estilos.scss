@@ -84,7 +84,7 @@ $utilities:(
 }
 
 /////////////////////////////////////////////
-/// 7. Estilos para el encabezado
+/// 7. Estilos para ** Encabezado **
 ////////////////////////////////////////////
 
 .encabezado{
@@ -143,3 +143,35 @@ $utilities:(
         box-shadow: 0 1px rgb(0 0 0 / 40%);
     }
 }
+
+/////////////////////////////////////////////
+/// 7. Estilos para ** Plan de acción **
+////////////////////////////////////////////
+
+.tituloConLinea{
+    margin: 0;
+    padding: 0;
+    &::after{
+        content: "";
+        display: block;
+        width: 150px;
+        border-bottom: 3px solid; //cuando no asignamos un color, se coloca el de su padre
+        margin: 1.3rem 0;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        @include media-breakpoint-up(lg){
+            width: 400px;
+            margin: 1.8rem 0;
+        }
+    }
+}
+
+.planDeAccionItem{
+    transition: box-shadow .3s ease;
+}
+
+.planDeAccionItem:hover{
+    box-shadow: $box-shadow;
+}
+

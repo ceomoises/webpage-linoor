@@ -11649,4 +11649,33 @@ textarea.form-control-lg {
   .teAyudamos {
     background: url("../images/fondoTeAyudamos-lg.jpg") center center/cover;
   }
+}
+
+.itemProyecto {
+  display: block;
+  position: relative;
+  overflow: hidden;
+}
+.itemProyecto::before {
+  content: "";
+  background: #293549;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+.itemProyecto:hover::before {
+  opacity: 0.8;
+}
+.itemProyecto h3, .itemProyecto .h3 {
+  position: absolute;
+  bottom: -3rem;
+  margin-bottom: 0;
+  width: 100%;
+  color: white;
+  transition: bottom 0.6s ease;
+}
+.itemProyecto:hover h3, .itemProyecto:hover .h3 {
+  bottom: 3rem;
 }/*# sourceMappingURL=estilos.css.map */

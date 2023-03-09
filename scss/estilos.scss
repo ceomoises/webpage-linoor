@@ -84,7 +84,7 @@ $utilities:(
 }
 
 /////////////////////////////////////////////
-/// 7. Estilos para ** Encabezado **
+/// 7. Estilos para -> Encabezado 
 ////////////////////////////////////////////
 
 .encabezado{
@@ -145,7 +145,7 @@ $utilities:(
 }
 
 /////////////////////////////////////////////
-/// 7. Estilos para ** Plan de acción **
+/// 7. Estilos para -> Plan de acción 
 ////////////////////////////////////////////
 
 .tituloConLinea{
@@ -173,5 +173,16 @@ $utilities:(
 
 .planDeAccionItem:hover{
     box-shadow: $box-shadow;
+}
+
+/////////////////////////////////////////////
+/// 7. Estilos para -> Te ayudamos 
+////////////////////////////////////////////
+
+.teAyudamos{
+    background: url("../images/fondoTeAyudamos.jpg") center center/cover;
+    @include media-breakpoint-up(lg){
+       background: url("../images/fondoTeAyudamos-lg.jpg") center center/cover; 
+    }
 }
 

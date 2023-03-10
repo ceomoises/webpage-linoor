@@ -204,7 +204,6 @@ $utilities:(
     &:hover::before{
         opacity: .8;
     }
-
     h3{
         position: absolute;
         bottom: -3rem;
@@ -213,10 +212,33 @@ $utilities:(
         color: white;
         transition: bottom .6s ease;
     }
-    
     &:hover h3{
         bottom: 3rem;
     }
+}
 
-
+/////////////////////////////////////////////
+/// 10. Estilos para -> Pie de página 
+////////////////////////////////////////////
+.pieDePagina{
+    a{
+        color: #748494;
+        text-decoration: none;
+    }
+    .redesSociales{
+        a{
+            color: #212529;
+            background:#748494;
+            // Los elementos en linea no se les puede asignar un width o height 
+            width: 1.8rem;
+            height: 1.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: .3rem;
+        }
+    }
+    .creditos{
+        border-top: 1px solid black;        
+    }
 }

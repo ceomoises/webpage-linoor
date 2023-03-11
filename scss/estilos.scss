@@ -39,11 +39,11 @@ $btn-padding-x: 2.4rem;
 /////////////////////////////////////////////
 /// 3. Cargando funciones nativas de Bootstrap
 ////////////////////////////////////////////
-@import "../libs/bootstrap/scss/functions";
-@import "../libs/bootstrap/scss/variables";
-@import "../libs/bootstrap/scss/maps";
-@import "../libs/bootstrap/scss/mixins";
-@import "../libs/bootstrap/scss/utilities";
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
 
 /////////////////////////////////////////////
 /// 4. API de Utilidades personalizadas
@@ -65,13 +65,49 @@ $utilities:(
         )
     )
 );
-@import "../libs/bootstrap/scss/utilities/api";
+@import "../node_modules/bootstrap/scss/utilities";
 
 /////////////////////////////////////////////
 /// 4. Imprimiendo Bootstrap 5
 ////////////////////////////////////////////
+// @import "../node_modules/bootstrap/scss/bootstrap.scss";
+// Layout & components 
+@import "../node_modules/bootstrap/scss/reboot"; //Estandar de estilos para todos los navegadores
+@import "../node_modules/bootstrap/scss/type";  //Estilos para los encabezados
+@import "../node_modules/bootstrap/scss/images";
+@import "../node_modules/bootstrap/scss/containers";
+@import "../node_modules/bootstrap/scss/grid";
+// @import "tables"; 
+@import "../node_modules/bootstrap/scss/forms"; 
+@import "../node_modules/bootstrap/scss/buttons"; 
+@import "../node_modules/bootstrap/scss/transitions"; 
+// @import "dropdown";
+// @import "button-group"; 
+@import "../node_modules/bootstrap/scss/nav";
+@import "../node_modules/bootstrap/scss/navbar";
+// @import "card"; 
+// @import "accordion"; 
+// @import "breadcrumb";
+// @import "pagination";
+// @import "badge";
+// @import "alert";
+// @import "progress";
+// @import "list-group"; 
+// @import "close";
+// @import "toasts";
+// @import "modal";
+// @import "tooltip";
+// @import "popover";
+// @import "carousel";
+// @import "spinners";
+// @import "offcanvas";
+@import "../node_modules/bootstrap/scss/placeholders";
 
-@import "../node_modules/bootstrap/scss/bootstrap.scss";
+// Helpers
+// @import "helpers"; 
+
+// Utilities
+@import "../node_modules/bootstrap/scss/utilities/api";
 
 /////////////////////////////////////////////
 /// 6. Estilos Generales
